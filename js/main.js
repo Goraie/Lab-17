@@ -27,16 +27,45 @@ addToggleClass(input2, brust)
 addToggleClass(input3, light)
 addToggleClass(input4, laser)
 
+// Интсрукция и о программе
+const overlayText = document.querySelector('.overlay-text'),
+			overlayTextOne = overlayText.querySelector('.overlay-text_1'),
+			overlayTextTwo = overlayText.querySelector('.overlay-text_2'),
+			overlayParagraph = overlayText.querySelector('p'),
+			btnInstaction = document.querySelector('.btn__instr'),
+			btnAbout = document.querySelector('.btn__about')
+
+btnInstaction.addEventListener('click', () => {
+	overlayText.classList.add('display-flex')
+	overlayTextOne.classList.add('display-flex')
+})
+btnAbout.addEventListener('click', () => {
+	overlayText.classList.add('display-flex')
+	overlayTextTwo.classList.add('display-flex')
+})
+overlayText.addEventListener('click', (e) => {
+	if(e.path.length === 5){
+		overlayTextTwo.classList.remove('display-flex')
+		overlayTextOne.classList.remove('display-flex')
+		overlayText.classList.remove('display-flex')
+	}
+})
+
+
+
+
 // Скрытие/появление установки для брюстера
 const overlay = document.querySelector('.overlay'),
 brustBtn = document.querySelector('.status-panel__bruster'),
 overlayClose = document.querySelector('.overlay__close')
 
-function overlayHeight(){overlay.style.height =  document.body.scrollHeight  + 'px'}
+function overlayHeight(o){o.style.height =  document.body.scrollHeight  + 'px'}
 
-overlayHeight()
+overlayHeight(overlay)
+overlayHeight(overlayText)
 window.addEventListener('resize', ()=> {
-	overlayHeight()
+	overlayHeight(overlay)
+	overlayHeight(overlayText)
 })
 
 brustBtn.addEventListener('click', () => {
