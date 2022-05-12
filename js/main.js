@@ -241,6 +241,21 @@ function callAllFunc(){
 	}
 }
 
+ratioWrapper.addEventListener('click', () => {
+	if(btnFirst === 0){
+		setIntencive(intenciveLaser)
+	} else {
+		setIntencive(intenciveLight)
+	}
+})
+ratioWrapper.addEventListener('wheel', () => {
+	if(btnFirst === 0){
+		setIntencive(intenciveLaser)
+	} else {
+		setIntencive(intenciveLight)
+	}
+})
+
 statusPanel.addEventListener('click', () => {
 	getButtons()
 	callAllFunc()
@@ -249,14 +264,3 @@ inputRadioWrapper.addEventListener('click', () => {
 	getButtons()
 	callAllFunc()
 })
-
-// const arrTarg = [[statusPanel, 'click'], [inputRadioWrapper, 'click'], [ratioWrapper, 'click','wheel']]
-
-// for(let i = 0; i < arrTarg.length; i++){
-// 	for(let j = 1; j < arrTarg.length; j++){
-// 		arrTarg[i][0].addEventListener(arrTarg[i][j], () => {
-// 			getButtons()
-// 			callAllFunc()
-// 		})
-// 	}
-// }
