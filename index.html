@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+	<title>Опыт Малюса. Угол Брюстера</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	
+	<header id="header" class="header">
+		<div class="nav-bar">
+			<div class="nav-bar__logo logo">
+				<a href="https://etu.ru/" target="_blank" class="logo__i"></a>
+			</div>
+			<div class="nav-bar__title">Опыт Малюса. Угол Брюстера</div>
+			<div class="btn-wrapeer">
+				<a href="#" target="_blank" class="btn">Инструкция</a>
+				<a href="#" target="_blank" class="btn">О программе</a>
+			</div>
+		</div>
+	</header>
+	<div class="overlay">
+		<div class="overlay__bruster">
+			<div class="overlay__dot"></div>
+		</div>
+		<div class="overlay__button">
+			<button class="overlay__close"></button>
+		</div>
+	</div>
+	<section class="main-sect">
+		<div class="container">
+			<div class="installation-wrapper">
+
+				<!-- status panel -->
+
+				<div class="status-panel status-panel__open">
+					<table class="status-panel__table">
+						<tr class="status-panel__row">
+							<td class="status-panel__numb">1</td>
+							<td class="status-panel__wrapper">
+								<label class="status-panel__button">
+									<input type="checkbox" class="status-panel__input input_1 laser">
+									<!-- <div class="span-panel__i"></div>
+									<div class="span-panel__i"></div> -->
+									<span class="status-panel__first">
+										<img src="img/svg/laser.svg" alt="laser" class="status-panel__image">
+										<img src="img/svg/light.svg" alt="light" class="status-panel__image">
+									</span>
+								</label>
+							</td>
+						</tr>
+						<tr class="status-panel__row">
+							<td class="status-panel__numb">2</td>
+							<td class="status-panel__wrapper">
+								<label class="status-panel__button">
+									<input type="checkbox" class="status-panel__input input_3">
+									<span class="status-panel__span"></span>
+								</label>
+							</td>
+						</tr>
+						<tr class="status-panel__row">
+							<td class="status-panel__numb">3</td>
+							<td class="status-panel__wrapper">
+								<label class="status-panel__button">
+									<input type="checkbox" class="status-panel__input input_2">
+									<span class="status-panel__span"></span>
+								</label>
+							</td>
+						</tr>
+						<tr class="status-panel__row">
+							<td class="status-panel__numb">4</td>
+							<td class="status-panel__wrapper">
+								<label class="status-panel__button">
+									<input type="checkbox" class="status-panel__input input_4">
+									<span class="status-panel__span"></span>
+								</label>
+							</td>
+						</tr>
+						<tr class="status-panel__row">
+							<td class="status-panel__numb">
+								<button class="status-panel__bruster">Угол Брюстера</button>
+							</td>
+					</table>
+					<div class="status-panel__toggle"></div>
+				</div>
+			
+				<!-- instalation -->
+
+				<div class="installation">
+					<img src="img/svg/installation.svg" alt="instalation" class="installation__main">
+					<img src="img/svg/bruster.svg" alt="bruster" class="installation__bruster">
+					<img src="img/svg/polar-1.svg" alt="polar-1" class="installation__polarisator installation__polarisator_light">
+					<img src="img/svg/polar-2.svg" alt="polar-2" class="installation__polarisator installation__polarisator_laser">
+					<span class="span-output">0.024</span>
+				</div>
+
+			</div>
+
+			<div class="info">
+				<div class="changeble">
+					<div class="polar">
+						<input type="text" class="polar__angle" value="10" data-displayPrevious=true	data-width="200" data-thickness=.2 data-fgColor="rgb(34, 34, 34)" data-bgColor="rgba(34,34,34,.2)" data-min="0" data-max="360">
+					</div>
+					<div class="brust">
+						<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="brust__plus"></button>
+						<input type="number" class="brust__input" min="27" max="71" value="34">
+						<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="brust__minus"></button>
+					</div>
+				</div>
+				<div class="output-wrapper">
+					<div class="output">0.024</div>
+					<div class="change-wrapper">
+						<form class="lambda-wrapper">
+							<label class="lambda-wrapper__lebel">
+								<input type="radio" checked class="lambda-wrapper__input lambda-wrapper__active " name="lambda">
+								<span class="lambda-wrapper__span">=   0.4 - 0.9</span>
+							</label>
+							<label class="lambda-wrapper__lebel">
+								<input type="radio" class="lambda-wrapper__input" name="lambda" >
+								<span class="lambda-wrapper__span">=   0.4 - 1.2</span>
+							</label>
+						</form>
+						<div class="change-intencive">
+							<h3 class="change-intencive__title">Интенсивность</h3>
+							<input type="text" value='60' data-min="22" data-max="60" data-angleOffset=-90 data-angleArc=180 data-displayPrevious=true	data-width="100" data-thickness=.3 data-fgColor="rgb(256, 256, 256)" data-bgColor="rgba(256, 256, 256, .8)" class="change-intencive__input">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer" class="footer">
+		
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.knob.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
