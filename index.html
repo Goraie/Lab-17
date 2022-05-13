@@ -32,14 +32,46 @@
 	</div>
 	<div class="overlay-text">
 		<div class="overlay-text_1">
-			<p class="overlay-text__p">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis similique, consequatur, repudiandae architecto vitae quidem soluta alias culpa dolor asperiores incidunt ratione quis blanditiis. Magni nemo sunt quo cumque! Excepturi, laudantium tempore in omnis consequatur iure fugiat corrupti dignissimos ea odit, pariatur exercitationem eum incidunt impedit? Fugit, quibusdam aliquid. Voluptate, ea? Dolorum odit laudantium modi eligendi, obcaecati necessitatibus harum, itaque autem enim libero nesciunt porro quo eos dolorem voluptatum vitae natus consequatur. Vitae consequatur tenetur nostrum dolorum ea? Sunt error voluptate nesciunt labore vero voluptatum, accusantium ipsum! Dolores illum, numquam aut, cupiditate nobis debitis error natus assumenda eos saepe a at dolorum in labore commodi explicabo hic, soluta sed. Deleniti dolores doloribus iure, ipsam officia enim aut adipisci natus ratione nobis quis maiores esse repellat expedita amet corporis magnam mollitia voluptas cupiditate eaque necessitatibus. Accusantium quo recusandae rerum debitis esse dolorum mollitia ipsam illum corporis cupiditate! Sapiente quod repellendus dicta a excepturi ea, culpa corporis aperiam saepe exercitationem accusamus fugit quos voluptatibus maiores ipsa impedit praesentium officia eos, nesciunt architecto fuga voluptatem. Nobis corrupti dicta quis quisquam necessitatibus laborum, esse officiis consequuntur, repellat soluta vitae est praesentium quaerat aperiam aut quod! Dolor nemo libero pariatur minus, repellendus quo debitis quisquam.
-			</p>
+			<div class="overlay-text__p">
+				<p class="overlay-text__text">
+					Справа есть несколько элементов, которые пригодятся вам для работы. Круговой элемент отвечает за поворот поляризатора и показывает градус, на который он повернут. Справа от него находится квадратная панель, которая пригодиться для поиска угла Брюстера. Изменение интенсивности происходит за счёт соответствующего тумблера. Установите интенсивность не меняйте ее в ходе лабораторной работы. Для того чтобы сделать измерения для соответствующего пункта лабораторной работы №17 необходимо включить следующие опции:
+				</p>	
+				<ol class="overlay-text__list">
+					<li class="overlay-text__item">
+						Для первого пункта, чтобы снять измерения вам понадобиться включить Лазер (красный кружок под пунктом 1 слева экрана), один из поляризаторов (пункт 2 или 4) и установить соответствующую волну.
+					</li>
+					<li class="overlay-text__item">
+						Для второго пункта установите Белый свет (Звездочка в пункте 1 слева), соответствующую волну и включите оба поляризатора (пункты 2 и 4).
+					</li>
+					<li class="overlay-text__item">
+						Для поиска угла Брюстера включите Лазер (красный кружок под пунктом 1 слева экрана) и нажмите на копку под пунктом 3, чтобы установить стеклянную пластину, а затем нажмите на соответствующую кнопку «Угол Брюстера».
+					</li>
+					<li class="overlay-text__item">
+						Для четвертого пункта лабораторной вам понадобиться включить Белый свет (Звездочка в пункте 1 слева), стеклянная пластина (пункт 3 слева), на которой обязательно установлен угол Брюстера, нижний поляризатор (пункт 4) и установить соответствующий световой диапазон.
+					</li>
+				</ol>
+			</div>
 		</div>
 		<div class="overlay-text_2">
-			<p class="overlay-text__p">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae explicabo laborum ad totam, deleniti fugiat quas, delectus id pariatur, commodi voluptates nemo aperiam harum minima iure corporis modi dolore repellendus rerum voluptas. Error nam minus accusamus quisquam libero necessitatibus illo facilis fugiat, aperiam, distinctio nihil?
-			</p>
+			<div class="overlay-text__p">
+				<p class="overlay-text__text">
+					Программа была разработана командой группы 1304:
+				</p>
+				<ul class="overlay-text__list">
+					<li class="overlay-text__item">
+						Арчибасов Егор Олегович
+					</li>
+					<li class="overlay-text__item">
+						Байков Егор Сергеевич
+					</li>
+					<li class="overlay-text__item">
+						Ярусова Татьяна Вячеславовна
+					</li>
+				</ul>
+				<p class="overlay-text__text">
+					Под руководством доцента кандидата наук каф. Физики Альтмарка Александра Моисеевича.
+				</p>
+			</div>
 		</div>
 	</div>
 	<section class="main-sect">
@@ -113,13 +145,19 @@
 
 			<div class="info">
 				<div class="changeble">
-					<div class="polar">
-						<input type="text" class="polar__angle" value="10" data-displayPrevious=true	data-width="200" data-thickness=.2 data-fgColor="rgb(34, 34, 34)" data-bgColor="rgba(34,34,34,.2)" data-min="0" data-max="360">
+					<div class="polar-w">
+						<h2 class="polar-w__title">Поворот поляризатора</h2>
+						<div class="polar">
+							<input type="text" class="polar__angle" value="10" data-displayPrevious=true	data-width="200" data-thickness=.2 data-fgColor="rgb(34, 34, 34)" data-bgColor="rgba(34,34,34,.2)" data-min="0" data-max="360">
+						</div>
 					</div>
-					<div class="brust">
-						<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="brust__plus"></button>
-						<input type="number" class="brust__input" min="27" max="71" value="34">
-						<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="brust__minus"></button>
+					<div class="brust-w">
+						<h2 class="brust-w__title">Изменение угла Брюстера</h2>
+						<div class="brust">
+							<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="brust__plus"></button>
+							<input type="number" class="brust__input" min="27" max="71" value="34">
+							<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="brust__minus"></button>
+						</div>
 					</div>
 				</div>
 				<div class="output-wrapper">
@@ -136,7 +174,7 @@
 							</label>
 						</form>
 						<div class="change-intencive">
-							<h3 class="change-intencive__title">Интенсивность</h3>
+							<h3 class="change-intencive__title">Изменение интенсивности</h3>
 							<input type="text" value='60' data-min="22" data-max="60" data-angleOffset=-90 data-angleArc=180 data-displayPrevious=true	data-width="100" data-thickness=.3 data-fgColor="rgb(256, 256, 256)" data-bgColor="rgba(256, 256, 256, .8)" class="change-intencive__input">
 						</div>
 					</div>
