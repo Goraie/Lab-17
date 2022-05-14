@@ -56,13 +56,14 @@ a, a:hover, a:active, a:visited{
 }
 
 .logo{
-	width: 370px;
+	width: 150px;
 	height: 100px;
+	margin-left: 40px;
 }
 .logo__i{
-	background: url('../img/svg/logo.svg') no-repeat center center;
+	background: url('../img/physicsleti2.jpg') no-repeat center center;
+	background-color: #000;
 	display: block;
-	width: 370px;
 	height: 100%;
 	object-fit: contain;
 	transform: scale(0.8);
